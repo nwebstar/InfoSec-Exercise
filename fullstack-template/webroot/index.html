@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Countries Search</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/app.js"></script>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+  	<h1>Country Information Database</h1>
+    <div>
+      <label for="criteria">Search Criteria</label>
+      <br />
+      <select name="searchType" id="searchTypeSel">
+        <option value="name">Name</option>
+        <option value="fullName">Full Name</option>
+        <option value="code">Alpha Code</option>
+      </select>
+      <input id="criteriaInp" type="text" onkeypress="criteriaInputKeyPressed(event)"
+        placeholder="Enter search criteria here..."/>
+      <button id="searchBtn" onclick="trySearch()">Search</button>
+    </div>
+    <br/><br/>
+    <div id=displayDiv></div>
+  </body>
+</html>
+
+
